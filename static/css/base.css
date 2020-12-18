@@ -3,10 +3,7 @@ html {
 }
 
 body {
-    background: url('/static/images/shutterstock_141950908.jpg') no-repeat center center fixed;
-    background-size: 70%;
-    padding-top: 164px;
-    height: auto;
+    
     /*height: calc(100vh - 164px);*/
     color: #555;
     font-family: 'Poppins';
@@ -104,4 +101,11 @@ body {
 
 body {
    height: calc(100vh - 116px);
+}
+
+.home-img {
+    background: url('/static/images/shutterstock_141950908.jpg') no-repeat center center fixed;
+    background-size: 70%;
+    padding-top: 164px;
+    height: auto;
 }
