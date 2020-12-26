@@ -4,10 +4,12 @@ from .models import Order, OrderLineItem
 
 class OrderLineItemAdminInline(admin.TabularInline):
     model = OrderLineItem
-    readonly_fields = ('lineitem_total')
+    readonly_fields = ('lineitem_total',)
 
 
 class OrderAdmin(admin.ModelAdmin):
+    inlines = (OrderLineItemAdminInline,)
+
     readonly_fields = ('order_number', 'date',
                        'delivery_cost', 'order_total',
                        'grand_total',)
@@ -22,6 +24,7 @@ class OrderAdmin(admin.ModelAdmin):
                     'order_total', 'delivery_cost',
                     'grand_total',)
 
-    ordering = ('date',)
+    ordering = ('-date',)
+
 
 admin.site.register(Order, OrderAdmin)
