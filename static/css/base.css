@@ -1,12 +1,14 @@
+/* from boutique ado */
 html {
     height: 100%;
 }
 
 body {
-    
-    /*height: calc(100vh - 164px);*/
+    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
     color: #555;
-    font-family: 'Poppins';
+    font-family: 'Lato';
 }
 
 /* from Bulma */
@@ -101,11 +103,13 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+/* ------------------------------- bootstrap toasts */
+
 .message-container {
     position: fixed;
     top: 72px;
     right: 15px;
-    z-index: 9999999999;
+    z-index: 99999999999;
 }
 
 .custom-toast {
@@ -197,8 +201,9 @@ a.category-badge > span.badge:hover {
         padding-top: 116px;
     }
 
-body {
-   height: calc(100vh - 116px);
+    body {
+        height: calc(100vh - 116px);
+    }
 }
 
 .home-img {
