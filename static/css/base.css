@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+    /*background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;*/
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -206,9 +206,13 @@ a.category-badge > span.badge:hover {
     }
 }
 
+.img-padding {
+    padding-top: 0px;
+}
+
 .home-img {
     background: url('/static/images/shutterstock_141950908.jpg') no-repeat center center fixed;
     background-size: 70%;
-    padding-top: 164px;
+    padding-top: 250px;
     height: auto;
 }

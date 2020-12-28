@@ -101,13 +101,35 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                {% include 'includes/mobile-top-header.html' %}
-                {% include 'includes/main-nav.html' %}
             </nav>
-        <div class="container img-padding"></div>
-        <div class="container-fluid home-img">
-        </div>    
+            <div class="collapse navbar-collapse" id="main-nav">
+    <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                My Progress
+            </a>
+        </li>
+         <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" data-toggle="dropdown" id="clothing-link" aria-haspopup="true" aria-expanded="false">
+                My Progress
+            </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" data-toggle="dropdown" id="all-products-link"  aria-haspopup="true" aria-expanded="false">
+                Forum
+            </a>
+        </li>
+          <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Shop
+            </a>
+        </li>
+    </ul>
+</div>
+          
         </div>
+        <div class="container-fluid home-img">
+        </div>  
     </header>
 
     {% if messages %}
@@ -136,7 +158,7 @@
 
     {% block postloadjs %}
     <script type="text/javascript">
-        $('.toast').toast('show');
+        $('.toasts').toast('show');
     </script>
     {% endblock %}
 
