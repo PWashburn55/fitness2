@@ -192,6 +192,7 @@ a.category-badge > span.badge:hover {
 
     .header-container {
         padding-top: 164px;
+        z-index: 9999;
     }
 }
 
@@ -210,9 +211,43 @@ a.category-badge > span.badge:hover {
     padding-top: 0px;
 }
 
-.home-img {
-    background: url('/static/images/shutterstock_141950908.jpg') no-repeat center center fixed;
-    background-size: 70%;
-    padding-top: 250px;
-    height: auto;
+.img-container {
+  position: relative;
+  text-align: center;
+  color: white;
 }
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 12px;
+  right: 26px;
+  color: black;
+}
+
+.home-img {
+  background: url('/static/images/shutterstock_788222044.jpg') no-repeat center center fixed;
+    /*width: 90% !important;
+    max-width: 100%;
+    padding-top: 350px;
+    height: auto;
+    position: center;*/
+  background-size: cover; /* or contain depending on what you want */
+  background-position: center center;
+  background-repeat: no-repeat;
+  vertical-align: bottom;
+  text-align:center;
+  margin:auto;
+  padding-top: 600px;
+}
+
+#main-nav {
+    z-index: 9999;
+}
+

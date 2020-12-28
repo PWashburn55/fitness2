@@ -1,4 +1,8 @@
 /* from stripe & boutique ado */
+.header-container {
+    z-index: 9999;
+}
+
 .StripeElement,
 .stripe-style-input {
   box-sizing: border-box;
@@ -35,4 +39,14 @@
 #card-element {
     color: #000;
     border: 1px solid #000;
+}
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
 }
