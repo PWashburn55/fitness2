@@ -1,8 +1,4 @@
 /* from stripe & boutique ado */
-.header-container {
-    z-index: 9999;
-}
-
 .StripeElement,
 .stripe-style-input {
   box-sizing: border-box;
