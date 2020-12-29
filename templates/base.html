@@ -15,7 +15,8 @@
 
     {% block corecss %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
@@ -132,8 +133,16 @@
     {% endblock %}
 
     {% block postloadjs %}
+    <!-- from boutique ado & stack overflow -->
     <script type="text/javascript">
         $('.toast').toast('show');
+       // $(window).scroll(function(){
+           // if ($(".navbar").offset().top > 100) {
+             //   $(".navbar").addClass("navbar-scrolled");
+           // } else {
+           //     $(".navbar").removeClass("navbar-scrolled");
+             }
+        });
     </script>
     {% endblock %}
 
