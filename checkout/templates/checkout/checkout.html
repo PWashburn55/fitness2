@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="/checkout/static/css/checkout.css">
 {% endblock %}
 
+{% block extra_js %}
+<script src="{% static 'checkout/js/stripe_elements.js' %}"></script>  
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -109,7 +113,7 @@
                         <!-- Used to display form errors -->
                         <div class="mb-3 text-danger" id="card-errors" role="alert"></div>
                         <!-- Pass the secret key to the view so we can get the payment intent id -->
-                        <input type="hidden" value="{{ stripe_secret_key }}" name="stripe_secret_key">
+                        <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
 
                     <div class="submit-button text-right mt-5 mb-2">                    

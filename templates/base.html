@@ -29,11 +29,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
     <script src="https://js.stripe.com/v3/"></script>
+     
     {% endblock %}
 
     {% block extra_js %}
     {% endblock %}
-
     <title>Fitness That Fits {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
@@ -108,9 +108,9 @@
         </div>
     </header>
 
-    {% if messages %}
+     {% if messages %}
         <div class="message-container">
-                  {% for message in messages %}
+            {% for message in messages %}
                 {% with message.level as level %}
                     {% if level == 40 %}
                         {% include 'includes/toasts/toast_error.html' %}
@@ -133,16 +133,8 @@
     {% endblock %}
 
     {% block postloadjs %}
-    <!-- from boutique ado & stack overflow -->
     <script type="text/javascript">
         $('.toast').toast('show');
-       // $(window).scroll(function(){
-           // if ($(".navbar").offset().top > 100) {
-             //   $(".navbar").addClass("navbar-scrolled");
-           // } else {
-           //     $(".navbar").removeClass("navbar-scrolled");
-             }
-        });
     </script>
     {% endblock %}
 
